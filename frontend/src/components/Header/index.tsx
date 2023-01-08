@@ -5,12 +5,14 @@ import * as S from './styled';
 export function Header() {
   return (
     <S.Container>
-      <div className="page-details">
-        <h1>Pedidos</h1>
-        <h2>Acompanhe o pedido dos clientes</h2>
-      </div>
+      <S.Content>
+        <div className="page-details">
+          <h1>Pedidos</h1>
+          <h2>Acompanhe o pedido dos clientes</h2>
+        </div>
 
-      <img src={logo} alt="WaiterApp" />
+        <img src={logo} alt="WaiterApp" />
+      </S.Content>
     </S.Container>
   );
 }
