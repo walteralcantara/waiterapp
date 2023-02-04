@@ -9,7 +9,7 @@ import * as S from './styled';
 
 export function Main() {
   const [isTableModalVisible, setIsTableModalVisible] =
-    useState(true);
+    useState(false);
   const [selectedTable, setSelectedTable] = useState('');
 
   function handleSaveTable(table: string) {
