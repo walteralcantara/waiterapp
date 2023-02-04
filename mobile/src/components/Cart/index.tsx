@@ -24,6 +24,7 @@ export function Cart({
   onDecrement,
   onConfirmOrder,
 }: CartProps) {
+  const [isLoading, setIsLoading] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const total = cartItems.reduce((acc, cartItem) => {
@@ -103,7 +104,11 @@ export function Cart({
           )}
         </S.TotalContainer>
 
-        <Button onPress={handleConfirmOrder} disabled={cartItems.length === 0}>
+        <Button
+          onPress={handleConfirmOrder}
+          disabled={cartItems.length === 0}
+          loading={isLoading}
+        >
           Confirmar pedido
         </Button>
       </S.Summary>
