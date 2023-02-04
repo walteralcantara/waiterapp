@@ -24,6 +24,7 @@ export function TableModal({
   const [table, setTable] = useState('');
 
   function handleSave() {
+    setTable('');
     onSave(table);
     onClose();
   }
